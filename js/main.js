@@ -1,11 +1,9 @@
-
-
 const quoteButton = document.body.querySelector('#get-quote');
 const quoteOutput = document.querySelector('#quote');
 
 function* quoteGenerator() {
   while (true) {
-    yield fetch('http://ron-swanson-quotes.herokuapp.com/v2/quotes')
+    yield fetch('https://ron-swanson-quotes.herokuapp.com/v2/quotes')
         .then(res => res.json());
   }
 }
